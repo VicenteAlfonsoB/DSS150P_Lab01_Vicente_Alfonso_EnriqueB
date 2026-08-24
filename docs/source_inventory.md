@@ -47,5 +47,16 @@
 * **Possible primary/business key:** id (or equivalent unique identifier in the payload)
 * **Potential schema-evolution risk:** The endpoint URL might change, or the API version could be deprecated.
 * **Potential data-quality risk:** Network timeouts, rate limiting, or receiving unexpected HTTP error codes (e.g., 500, 404).
+* **API Retrieval Timestamp (UTC):** 2026-08-24T14:48:24Z
 
-* **API Retrieval Timestamp (UTC):** 2026-08-24T11:52:32Z
+## 5. PostgreSQL Database
+* **Source name:** dss150p_lab (Dockerized PostgreSQL 16 instance)
+* **Source-system type:** Relational Database (OLTP)
+* **Data format:** Relational tables (SQL)
+* **Structured / semi-structured / unstructured:** Structured
+* **Expected update pattern:** Transactional / Continuous inserts and updates
+* **Likely acquisition method:** SQL queries over a database connection (SQLAlchemy/psycopg2), or batch extracts
+* **Schema location or schema owner:** Defined in the database catalog (`information_schema`) / Database Administrator
+* **Possible primary/business key:** customer_id (declared PRIMARY KEY in the table definition)
+* **Potential schema-evolution risk:** Columns altered or dropped by migrations without notifying downstream consumers.
+* **Potential data-quality risk:** Constraint violations if checks are disabled, or stale data if the snapshot is not refreshed.
