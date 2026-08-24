@@ -73,4 +73,4 @@ Full details are in `docs/source_inventory.md` and `docs/source_profile.md`.
 - <ADD ANY OTHER LIMITATIONS YOU OBSERVED>
 
 ## AI Usage
-I used Claude Code (Anthropic) as a refresher on the basics while completing this lab: it checked my repository step by step against the lab requirements, helped me debug script errors (nested JSON columns in pandas, schema-qualified SQL queries), and helped structure my documentation. I set up the environment, ran all scripts myself, reviewed every change, and wrote the reflection and source profile interpretations in my own words. I can explain and reproduce each step.
+I used Claude Code (Anthropic) as a refresher on the basics while completing, helped me debug script errors (nested JSON columns in pandas, schema-qualified SQL queries), and helped structure my documentation. I set up the environment, ran all scripts myself, reviewed every change, and wrote the reflection and source profile interpretations in my own words. I can explain and reproduce each step.
