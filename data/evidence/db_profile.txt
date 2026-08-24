@@ -1,0 +1,15 @@
+=== Tables in Database ===
+  table_schema table_name
+0          lab  customers
+
+=== Inspecting Table: customers ===
+
+--- Columns and Data Types ---
+column_name data_type is_nullable
+customer_id    bigint          NO
+  full_name      text          NO
+      email      text         YES
+       city      text         YES
+signup_date      date         YES
+
+--- Row Count ---

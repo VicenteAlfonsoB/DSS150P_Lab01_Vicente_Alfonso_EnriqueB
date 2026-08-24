@@ -1,4 +1,0 @@
-Python 3.13.9
-git version 2.50.1 (Apple Git-155)
-Docker version 29.7.2, build a7dcaa6
-Docker Compose version v5.4.0

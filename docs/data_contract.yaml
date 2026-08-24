@@ -1,0 +1,45 @@
+# Source: customers.csv
+# Reason for selection: It is highly structured and contains straightforward entity data ideal for a basic contract.
+
+dataset_name: customers
+version: 1.0
+owner: unknown - requires confirmation
+source_type: file
+source_format: csv
+acquisition_method: Batch ingestion via Python (Pandas)
+expected_update_pattern: batch
+primary_key: customer_id
+
+schema:
+  - name: customer_id
+    type: integer
+    nullable: false
+    description: Unique identifier for the customer
+  - name: full_name
+    type: string
+    nullable: false
+    description: Full name of the customer
+  - name: email
+    type: string
+    nullable: true
+    description: Customer email address
+  - name: city
+    type: string
+    nullable: true
+    description: City of residence
+  - name: signup_date
+    type: date
+    nullable: true
+    description: Date the customer registered
+
+quality_rules:
+  - customer_id must not be null
+  - customer_id must be unique
+  - customer_id must be greater than 0
+  - email must contain an '@' symbol if present
+
+freshness_expectation: unknown - requires confirmation
+duplicate_policy: deduplicate
+schema_evolution_policy: fail pipeline if columns change
+consumer: Downstream Analytics Team
+notes: The true owner of this dataset needs to be confirmed by the business side.
